@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CKK Electricals</title>
+  <style>
+    :root {
+      --main-red: rgba(203, 42, 42, 0.9);
+      --text-light: #eee6e6;
+      --background-overlay: rgba(244, 244, 244, 0.95);
+      --section-bg: rgba(255, 255, 255, 0.9);
+      --footer-bg: rgba(51, 51, 51, 0.9);
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: url('https://images.unsplash.com/photo-1604079628048-943b92e0c075?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+    }
+    header {
+      background: var(--main-red);
+      color: var(--text-light);
+      padding: 1rem;
+      text-align: center;
+    }
+    nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    nav ul li {
+      margin: 0 10px;
+    }
+    nav ul li a {
+      color: var(--text-light);
+      text-decoration: none;
+      font-size: 1rem;
+    }
+    .hero, .content, #why-choose {
+      background: var(--background-overlay);
+      margin: 2rem auto;
+      max-width: 90%;
+      padding: 2rem;
+      border-radius: 10px;
+      text-align: center;
+    }
+    footer {
+      background: var(--footer-bg);
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 10px;
+      padding: 1rem;
+    }
+    .gallery-grid img {
+      width: 100%;
+      border-radius: 8px;
+      transition: transform 0.3s;
+      cursor: pointer;
+    }
+    .gallery-grid img:hover {
+      transform: scale(1.05);
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.9);
+      justify-content: center;
+      align-items: center;
+    }
+    .modal-content {
+      max-width: 90%;
+      max-height: 90%;
+    }
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: #fff;
+      font-size: 35px;
+      cursor: pointer;
+    }
+    .whatsapp-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+      z-index: 1000;
+    }
+    .whatsapp-float img {
+      width: 28px;
+      height: 28px;
+    }
+    @media (max-width: 768px) {
+      header img {
+        max-width: 90%;
+        height: auto;
+      }
+      nav ul li {
+        margin: 5px 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="fade-in">
+    <div style="display: flex; align-items: center; justify-content: center; gap: 1rem;">
+      <img src="C:\Users\admin\Desktop\CKK Electricals\Screenshot 2025-04-06 155544.png" alt="CKK Electricals Logo" width="500" height="150" style="vertical-align: middle; margin-right: 15px;" />
+    </div>
+    <link rel="stylesheet" href="C:\Users\admin\Desktop\CKK Electricals\ckkelectricals.css" />
+    <nav>
+      <ul>
+        <li><a href="#">Padamugal</a></li>
+        <li><a href="#">Kakkanad</a></li>
+        <li><a href="#">Cochin 30</a></li>
+        <li><a href="#">Contact:- 9895025559, 9633450559</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="hero fade-in">
+    <h2 style="color: red;">Welcome to CKK Electricals - Powering Your World!</h2>
+    <p>
+      At <b>CKK Electricals</b>, we are proud to be your trusted partners in comprehensive electrical solutions, serving both domestic and commercial sectors with precision and reliability. <br>
+With over two decades of hands-on experience, we have been consistently delivering quality, safety, and innovation in every project we undertake. <br>
+From powering cozy homes to energizing large-scale commercial establishments, our commitment to excellence remains unwavering. <br>
+Guided by the visionary leadership of our esteemed director, <b>Mr. Babu OK</b>, we continue to light up lives and build lasting relationships across Kochi and beyond. <br>
+Choose <b>CKK Electricals</b> – where experience meets trust, and every connection matters.    </p>
+    <h2 style="color: black;">OUR DIRECTOR</h2>
+<img src="C:\Users\admin\Desktop\CKK Electricals\IMG_20250420_153900.jpg" 
+     style="max-width: 100%; height: auto; vertical-align: middle; margin-right: 15px;" 
+     alt="CKK Electricals Office">
+    <h2 style="color: black;">BABU OK</h2>
+  </section>
+  <section id="why-choose" style="color: black;" class="fade-in">
+    <h3 style="font-size: 2rem; margin-bottom: 1rem;">Why Choose CKK Electricals?</h3>
+    <ul style="list-style: none; padding: 0;">
+      <li style="margin-bottom: 0.75rem;">✅ <strong>Experience: With two decades in the industry, we bring a wealth of experience to 
+        every project.</strong></li>
+      <li style="margin-bottom: 0.75rem;">✅ <strong>Quality Assurance: Our commitment to quality ensures that every installation and 
+        repair meets the highest standards</strong></li>
+      <li style="margin-bottom: 0.75rem;">✅ <strong>Customer-Centric Approach: Your satisfaction is our priority. We work closely with 
+        clients to understand their unique needs and deliver tailored solutions. </strong></li>
+      <li style="margin-bottom: 0.75rem;">✅ <strong>Innovation: Staying ahead in the ever-evolving electrical landscape, we embrace 
+        cutting-edge technologies and practices</strong></li>
+    </ul>
+  </section>
+  <section class="content fade-in">
+    <h2 style="color: black;">About Us</h2>
+    <p  style="align-content: center;">
+      CKK Electricals has established itself as a reliable and innovative electrical contracting 
+company dedicated to delivering top-notch services.
+<br>
+We take pride in our commitment 
+to quality, safety, and efficiency, ensuring that each project, big or small, is executed 
+with precision.
+<br>
+We aim at institutionalizing continuous improvement in work modules in 
+a cost effective manner thus feel comfortable in setting the corporate objectives and 
+achieving the targets.
+<br>
+We pay paramount attention to technology as it changes the 
+business environment radically and helps us in setting new business model that alters 
+the whole dynamics of customer service and orientation.</p>
+    <section class="gallery">
+      <h2 style="color: black;">Our Works</h2>
+      <style>
+        .gallery-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+          gap: 10px;
+          padding: 20px;
+        }
+        .gallery-grid img {
+          width: 100%;
+          cursor: pointer;
+          transition: transform 0.3s;
+        }
+        .gallery-grid img:hover {
+      transform: scale(1.05);
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 10;
+      padding-top: 60px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.9);
+    }
+    .modal-content {
+      margin: auto;
+      display: block;
+      max-width: 90%;
+      max-height: 90%;
+    }
+    .close {
+      position: absolute;
+      top: 30px;
+      right: 35px;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .close:hover {
+      color: #bbb;
+    }
+  </style>
+      <div class="gallery-grid">
+        <img src="C:\Users\admin\Desktop\CKK Electricals\Photos\IMG-20250406-WA0015.jpg" alt="Work 1" />
+        <img src="C:\Users\admin\Desktop\CKK Electricals\Photos\IMG-20250406-WA0016.jpg" alt="Work 2" />
+        <img src="C:\Users\admin\Desktop\CKK Electricals\Photos\IMG-20250406-WA0017.jpg" alt="Work 3" />
+        <img src="C:\Users\admin\Desktop\CKK Electricals\Photos\IMG-20250406-WA0019.jpg" alt="Work 4" />
+        <img src="C:\Users\admin\Desktop\CKK Electricals\Photos\IMG-20250406-WA0020.jpg" alt="Work 5" />
+        <img src="C:\Users\admin\Desktop\CKK Electricals\Photos\IMG-20250406-WA0023.jpg" alt="Work 6" />
+        <img src="C:\Users\admin\Desktop\CKK Electricals\Photos\IMG-20250406-WA0023.jpg" alt="work 7"/>
+        <img src="C:\Users\admin\Desktop\CKK Electricals\Photos\IMG-20250406-WA0024.jpg" alt="work 8"/>
+        <img src="C:\Users\admin\Desktop\CKK Electricals\Photos\IMG-20250406-WA0025.jpg" alt="work 9"/>
+        <img src="C:\Users\admin\Desktop\CKK Electricals\Photos\IMG-20250406-WA0026.jpg" alt="work 10"/>
+        <img src="C:\Users\admin\Desktop\CKK Electricals\Photos\IMG-20250406-WA0051.jpg" alt="work 11"/>
+        <img src="C:\Users\admin\Desktop\CKK Electricals\Photos\IMG-20250406-WA0052.jpg" alt="work 12"/>
+        <img src="C:\Users\admin\Desktop\CKK Electricals\Photos\IMG-20250406-WA0053.jpg" alt="work 13"/>
+        <img src="C:\Users\admin\Desktop\CKK Electricals\Photos\IMG-20250406-WA0068.jpg" alt="work 14"/>
+        <img src="C:\Users\admin\Desktop\CKK Electricals\Photos\IMG-20250406-WA0089.jpg" alt="work 15"/>
+      </div>
+    </section>
+    <h2 style="color: black;">Our Services</h2>
+    <h3 style="color: black;">Comprehensive Electrical Solutions for Every Sector</h3>
+    <p>
+      At CKK Electricals, we offer a wide range of reliable and efficient electrical services designed to meet the needs of various sectors. Whether it’s a new project, an upgrade, or maintenance, our expert team ensures quality workmanship and absolute safety at every step.
+    </p>
+    <p><b>Domestic Electrical Solutions:</b>From wiring installations to lighting design, we specialize 
+      in creating safe and aesthetically pleasing electrical setups for homes. </p>
+      <p><b>Commercial Electrical Projects:</b>Whether you're a startup, a retail space, or a large scale enterprise, our team is equipped to handle all your commercial electrical needs. </p>
+      <p><b>Maintenance and Repairs:</b>Our experienced technicians are at your service for 
+        prompt and efficient electrical repairs and maintenance to keep your systems running 
+        smoothly.</p>
+      <p><b>Energy Efficiency Solutions:</b> Embrace sustainable practices with our energy-efficient 
+        solutions designed to reduce your carbon footprint and save on utility costs.</p>
+        <h2 style="color: black;">Our Team</h2>
+        <p>Behind every successful project is a team of dedicated professionals. At 
+          CKK Electricals, our skilled and certified technicians work collaboratively to bring your 
+          vision to life. Our commitment to excellence and safety sets us apart in the industry.</p>
+          <h2 style="color: black;">Our Reach</h2>
+          <p>While our roots are in Kochi, Kerala, CKK Electricals has left its mark 
+            across various regions. We take pride in our ability to seamlessly adapt to diverse 
+            environments and deliver outstanding results. </p>
+      <p><i>Whatever your requirement, CKK Electricals is equipped to deliver reliable, safe, and cost-effective solutions tailored to your specific needs.</i></p>
+   <h2 style="color: black;">Our Major Clients</h2>
+  <img src="C:\Users\admin\Desktop\CKK Electricals\images.png">
+  <p>As <b> Sub Contractors</b> for <b>Inscape Design Solutions</b> , PT Usha Road , Ernakulam,  
+Kerala for the last 15 years.</p>
+<img src="C:\Users\admin\Desktop\CKK Electricals\images.jpg">
+<p>As  <b>Sub Contractors</b> for <b>Concept Design Studio</b>, Kadavanthra, Ernakulam,  Kerala 
+from the beginning till date.</p>
+<img src="C:\Users\admin\Desktop\CKK Electricals\images (1).jpg">
+<p>As  <b>Sub Contractors</b> for <b>D’Tale Architects & Designers</b>, Kakkanad, Ernakulam,  
+Kerala since 2022 </p>
+<p><i><b>Contact Us:</b> Ready to power up your space with CKK Electricals? Contact us today 
+for a consultation. Visit our address in Kochi, Kerala, or reach out through our e-mail or 
+phone for personalized assistance.</i></p>
+    </section>
+  <a href="https://wa.me/918281906559?text=I%20would%20like%20to%20learn%20more%20about%20the%20details%20of%20your%20work.%20Could%20you%20please%20provide%20additional%20information%20regarding%20your%20services%20and%20past%20projects?" 
+   target="_blank" 
+   style="
+     position: fixed;
+     width: 60px;
+     height: 60px;
+     bottom: 20px;
+     right: 20px;
+     background-color: #25D366;
+     color: white;
+     border-radius: 50%;
+     text-align: center;
+     font-size: 30px;
+     box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+     z-index: 1000;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+       alt="WhatsApp" 
+       style="width: 28px; height: 28px;">
+</a>
+  <footer class="fade-in">
+    <p style="color: whitesmoke;">&copy;Our Contact Details: 
+      CKK Electricals  
+      Olikuzhi House 
+      Padamugal, Kakkanad 
+      Kochi-Kerala-682030 
+      Cell:98950 25559,82819 06559 
+      e-mail: ckkelectricals@gmail.com
+      <br> 
+      GSTIN : 32BNQPB4213C1ZO 
+      Contract licence name : CKK Electricals  
+      Contract licence number: CB 8569
+    </p>
+  </footer>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const faders = document.querySelectorAll('.fade-in');  
+      const appearOptions = {
+        threshold: 0.1
+      };  
+      const appearOnScroll = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          } else {
+            entry.target.classList.remove('visible');
+          }
+        });
+      }, appearOptions);
+      faders.forEach(fader => {
+        appearOnScroll.observe(fader);
+      });
+    });
+  </script>  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const faders = document.querySelectorAll('.fade-in');
+      const appearOptions = { threshold: 0.1 };
+      const appearOnScroll = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          } else {
+            entry.target.classList.remove('visible');
+          }
+        });
+      }, appearOptions);
+      faders.forEach(fader => appearOnScroll.observe(fader));
+    });
+  </script>
+ <background: url="https://images.unsplash.com/photo-1604079628048-943b92e0c075?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80" no-repeat center center fixed;></background:>
+ <div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="imgModal">
+</div>
+<script>
+  const modal = document.getElementById("myModal");
+  const modalImg = document.getElementById("imgModal");
+  const closeBtn = document.getElementsByClassName("close")[0];
+  document.querySelectorAll(".gallery-grid img").forEach(img => {
+    img.addEventListener("click", () => {
+      modal.style.display = "block";
+      modalImg.src = img.src;
+      modalImg.alt = img.alt;
+    });
+  });
+  closeBtn.onclick = function () {
+    modal.style.display = "none";
+  }
+  modal.onclick = function (e) {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  }
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+  });
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</script>
+</body>
+</html>
